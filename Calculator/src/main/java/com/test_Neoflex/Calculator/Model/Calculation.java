@@ -12,6 +12,7 @@ public class Calculation {
 
     //ID вычисления
     private int calculationId;
+
     //Средняя зар. плата за 12 дней
     private double average_salary;
     //Количество дней отпуска
