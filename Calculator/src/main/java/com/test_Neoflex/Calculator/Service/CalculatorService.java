@@ -1,6 +1,6 @@
 package com.test_Neoflex.Calculator.Service;
 
-import com.test_Neoflex.Calculator.Model.Calculator;
+import com.test_Neoflex.Calculator.Model.Calculation;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -10,10 +10,10 @@ import java.util.HashMap;
 public class CalculatorService  {
 
     //История вычислений
-    HashMap<Integer, Calculator> calculations = new HashMap<>();
+    HashMap<Integer, Calculation> calculations = new HashMap<>();
 
     //Рассчет результата
-    public Calculator calculate_res(int index, double average_salary, int number_of_days) {
+    public Calculation calculate_res(int index, double average_salary, int number_of_days) {
         //Величина отпускных = средний дневной заработок × количество рабочих дней отпуска
         //average_salary - это за 12 месяцев
         //Необходимо найти средний дневной заработок
@@ -44,13 +44,13 @@ public class CalculatorService  {
     public void add_calculation(int index, double average_salary, int number_of_days, double result) {
 
 
-        calculations.put(index, new Calculator(index, average_salary, number_of_days, result));
+        calculations.put(index, new Calculation(index, average_salary, number_of_days, result));
 
     }
 
 
     //Поиск вычисления по ID
-    public Calculator findCalculationById(int index) {
+    public Calculation findCalculationById(int index) {
         return calculations.get(index);
     }
 

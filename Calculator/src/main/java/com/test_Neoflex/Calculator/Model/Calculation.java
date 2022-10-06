@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Calculator {
+public class Calculation {
 
     //ID вычисления
     private int calculationId;
@@ -18,7 +18,5 @@ public class Calculator {
     private int numberOfDays;
     //Результат
     private double result;
-
-
 
 }
